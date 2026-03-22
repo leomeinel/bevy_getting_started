@@ -2,7 +2,7 @@
  * File: main.rs
  * Author: Leopold Johannes Meinel (leo@meinel.dev)
  * -----
- * Copyright (c) 2025 Leopold Johannes Meinel & contributors
+ * Copyright (c) 2026 Leopold Johannes Meinel & contributors
  * SPDX ID: Apache-2.0
  * URL: https://www.apache.org/licenses/LICENSE-2.0
  * -----
@@ -43,7 +43,7 @@ impl Plugin for AppPlugin {
                 })
                 .set(WindowPlugin {
                     primary_window: Window {
-                        title: "bevy-getting-started".to_string(),
+                        title: "bevy_getting_started".to_string(),
                         fit_canvas_to_parent: true,
                         ..default()
                     }
