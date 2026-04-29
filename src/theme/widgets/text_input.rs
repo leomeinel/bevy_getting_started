@@ -1,12 +1,6 @@
 /*
- * File: text_input.rs
- * Author: Leopold Johannes Meinel (leo@meinel.dev)
- * -----
- * Copyright (c) 2026 Leopold Johannes Meinel & contributors
- * SPDX ID: Apache-2.0
- * URL: https://www.apache.org/licenses/LICENSE-2.0
- * -----
- * Heavily inspired by: https://github.com/ickshonpe/bevy_ui_text_input/blob/master/examples/multiple_inputs.rs
+ * Heavily inspired by:
+ * - https://github.com/ickshonpe/bevy_ui_text_input/blob/master/examples/multiple_inputs.rs
  */
 
 //! Text input widget
