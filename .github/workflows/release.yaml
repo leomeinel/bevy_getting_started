@@ -221,7 +221,7 @@ jobs:
         if: ${{ env.is_platform_enabled == 'true' && matrix.platform == 'web' }}
         run: |
           # Build package
-          cargo build --no-default-features --profile web-release --locked --target=${{ matrix.targets }} --features='${{ matrix.features }}' -j default
+          cargo build --no-default-features --profile web-release --locked --target=${{ matrix.targets }} --features='${{ matrix.features }}'
 
           # Install binaryen version 125
           curl -LJO https://github.com/WebAssembly/binaryen/releases/download/version_125/binaryen-version_125-x86_64-linux.tar.gz
@@ -241,7 +241,7 @@ jobs:
         if: ${{ env.is_platform_enabled == 'true' && matrix.platform != 'web' }}
         run: |
           for target in ${{ matrix.targets }}; do
-            cargo build --no-default-features --release --locked --target="${target}" --features='${{ matrix.features }}' -j default
+            cargo build --no-default-features --release --locked --target="${target}" --features='${{ matrix.features }}'
             mv target/"${target}"/release/'${{ env.cargo_build_binary_name }}${{ matrix.binary_ext }}' tmp/binary/"${target}"'${{ matrix.binary_ext }}'
           done
           if [ '${{ matrix.platform }}' = 'macos' ]; then
